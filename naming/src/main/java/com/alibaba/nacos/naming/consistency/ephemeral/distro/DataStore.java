@@ -34,6 +34,10 @@ import java.util.concurrent.ConcurrentHashMap;
 @Component
 public class DataStore {
 
+    public void setDataMap(Map<String, Datum> dataMap) {
+        this.dataMap = dataMap;
+    }
+
     private Map<String, Datum> dataMap = new ConcurrentHashMap<>(1024);
 
     public void put(String key, Datum value) {
